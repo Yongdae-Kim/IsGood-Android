@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_member_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/favorite_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <com.beardedhen.androidbootstrap.BootstrapThumbnail
+                android:id="@+id/favorite_member_iv"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                app:bootstrapSize="md"
+                app:hasBorder="true"
+                app:roundedCorners="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favorite_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/favorite_image_layout">
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/favorite_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이   름"
+                app:bootstrapHeading="h6"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/favorite_member_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/favorite_member_iv"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/favorite_name_label"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:roundedCorners="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favorite_belong_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/favorite_name_layout"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/favorite_image_layout">
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/favorite_belong_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소   속"
+                app:bootstrapHeading="h6"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/favorite_member_belong_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/favorite_belong_label"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:roundedCorners="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favorite_department_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/favorite_belong_layout"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/favorite_image_layout">
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/favorite_department_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부   서"
+                app:bootstrapHeading="h6"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/favorite_member_department_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/favorite_department_label"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:roundedCorners="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

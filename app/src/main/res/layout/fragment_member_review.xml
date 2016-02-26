@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/register_review_form_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/register_review_rating_bar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/register_review_rating_bar_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="평   점"
+                app:bootstrapBrand="info"
+                app:bootstrapHeading="h6"
+                app:roundedCorners="true" />
+
+            <io.techery.properratingbar.ProperRatingBar
+                android:id="@+id/register_review_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/register_review_rating_bar_label"
+                android:textSize="25sp"
+                app:prb_clickable="true"
+                app:prb_defaultRating="3"
+                app:prb_symbolicTick="★"
+                app:prb_symbolicTickNormalColor="@android:color/darker_gray"
+                app:prb_symbolicTickSelectedColor="@android:color/holo_blue_dark"
+                app:prb_totalTicks="5" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/register_review_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_review_rating_bar_layout"
+            android:layout_marginTop="5dp">
+
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/register_review_content_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="내   용"
+                app:bootstrapBrand="info"
+                app:bootstrapHeading="h6"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:id="@+id/register_review_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:hint="국회의원에게 한줄평을 남겨주세요."
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/register_review_content_label"
+                app:bootstrapBrand="info"
+                app:roundedCorners="true" />
+        </RelativeLayout>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/register_review_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_review_content_layout"
+            android:layout_marginTop="5dp"
+            android:text="한줄평 남기기"
+            app:bootstrapBrand="info"
+            app:bootstrapSize="md"
+            app:buttonMode="regular"
+            app:roundedCorners="true"
+            app:showOutline="false" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/review_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/register_review_form_layout"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/review_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/review_writer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/review_writer_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="작성자"
+                    app:bootstrapHeading="h6"
+                    app:roundedCorners="true" />
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/review_writer_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/review_writer_label"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    app:roundedCorners="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/review_rating_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_writer_layout"
+                android:layout_marginTop="5dp">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/review_rating_bar_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="평   점"
+                    app:bootstrapHeading="h6"
+                    app:roundedCorners="true" />
+
+                <io.techery.properratingbar.ProperRatingBar
+                    android:id="@+id/review_rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/review_rating_bar_label"
+                    android:textSize="25sp"
+                    app:prb_clickable="false"
+                    app:prb_defaultRating="3"
+                    app:prb_symbolicTick="★"
+                    app:prb_symbolicTickNormalColor="@android:color/darker_gray"
+                    app:prb_symbolicTickSelectedColor="@android:color/holo_blue_dark"
+                    app:prb_totalTicks="5" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/review_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_rating_bar_layout"
+                android:layout_marginTop="5dp">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/review_content_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내   용"
+                    app:bootstrapHeading="h6"
+                    app:roundedCorners="true" />
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/review_content_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/review_content_label"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    app:roundedCorners="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/review_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_content_layout"
+                android:layout_marginTop="5dp">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/review_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="등록일"
+                    app:bootstrapHeading="h6"
+                    app:roundedCorners="true" />
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/review_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/review_date_label"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    app:roundedCorners="true" />
+            </RelativeLayout>
+
+            <com.owater.library.CircleTextView
+                android:id="@+id/review_msg_cnt_tv"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:ct_backgroundColor="#d9534f" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

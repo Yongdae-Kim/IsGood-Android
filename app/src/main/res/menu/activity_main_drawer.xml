@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_party"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="정당으로 보기" />
+        <item
+            android:id="@+id/nav_region"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="지역으로 보기" />
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/ic_menu_share"
+            android:title="관심있는 국회의원 보기" />
+        <item
+            android:id="@+id/nav_chating"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="정치 토록방 들어가기" />
+    </group>
+</menu>

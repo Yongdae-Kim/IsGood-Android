@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/message_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/register_message_form_layout"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/register_message_form_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <RelativeLayout
+                android:id="@+id/register_message_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_review_rating_bar_layout"
+                android:layout_marginTop="5dp">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:id="@+id/register_message_content_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="내   용"
+                    app:bootstrapBrand="danger"
+                    app:bootstrapHeading="h6"
+                    app:roundedCorners="true" />
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/register_message_content_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/register_message_content_label"
+                    android:hint="여러 사람들과 정치의견을 공유하세요."
+                    app:roundedCorners="true" />
+            </RelativeLayout>
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/register_message_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_message_content_layout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="메시지 남기기"
+                app:bootstrapBrand="danger"
+                app:bootstrapSize="md"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
